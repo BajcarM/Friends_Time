@@ -9,46 +9,9 @@ svg #g6374 {
   transition: all 1s ease-in-out;
   transform-origin: 115px 170px;
 }
-svg #layer7 {
-  -webkit-animation: weatherWheel 10s infinite linear;
-          animation: weatherWheel 10s infinite linear;
-}
-@-webkit-keyframes weatherWheel {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@keyframes weatherWheel {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-svg #path957 {
+svg #g1261 {
   transform-origin: 114.5px 169.5px;
-  -webkit-animation: rotation 1s infinite ease;
-          animation: rotation 1s infinite ease;
-}
-@-webkit-keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(6deg);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(6deg);
-  }
+  transition: all 0.3s ease;
 }
 svg #tspan6682 {
   -webkit-animation: blink infinite 1s ease-in;
@@ -82,43 +45,8 @@ svg #tspan6682 {
     opacity: 0.1;
   }
 }
-svg #rect880 {
-  -webkit-animation: opacity infinite 10s ease;
-          animation: opacity infinite 10s ease;
-}
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+svg .hidden {
+  visibility: hidden;
 }
 
 svg {
