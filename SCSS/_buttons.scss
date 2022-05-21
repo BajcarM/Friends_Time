@@ -1,0 +1,10 @@
+svg {
+  & #path1328,
+  #path1299 {
+    // transition: all 2s linear;
+
+    &:active {
+        fill: #fff;
+    }
+  }
+}

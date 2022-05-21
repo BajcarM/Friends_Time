@@ -1,8 +1,8 @@
 const timeDisplay = document.getElementById("tspan4839");
 const displayAmPm = document.getElementById("tspan4843");
-const buttonFormatTime = document.getElementById("g1269");
+const buttonFormatTime = document.getElementById("g1361");
 const buttonFormatTimeText = document.getElementById("tspan4847");
-const buttonWeather = document.getElementById("g1277");
+const buttonWeather = document.getElementById("g1370");
 const buttonWeatherText = document.getElementById("tspan4855");
 const cogWheel = document.getElementById("g1261");
 const displaySunMoon = document.getElementById("layer7");
@@ -45,10 +45,12 @@ const displayTime = () => {
   //     currentTime.getHours() * 8 - 90
   //   }deg)`;
 
-  const day = currentTime.getHours() - 6 < 13;
+  const dayNight = currentTime.getHours() > 6 && currentTime.getHours() < 19;
 
   displaySunMoon.style.transform = `
-rotate(${-50 + (85 / 12) * (currentTime.getHours() - 6) + 180 * day}deg)
+rotate(${
+    -50 + (85 / 12) * ((currentTime.getHours() - 6) % 12) + 180 * dayNight
+  }deg)
 `;
 };
 

@@ -49,6 +49,11 @@ svg .hidden {
   visibility: hidden;
 }
 
+svg #path1328:active,
+svg #path1299:active {
+  fill: #fff;
+}
+
 svg {
   height: 800px;
   width: 600px;
