@@ -57,14 +57,11 @@ const rotateSun = (date) => {
 };
 
 const displayWeather = () => {
-  displayClouds.style.opacity = `${weather * 1}`;
-  displayRain.style.opacity = `${weather * 1}`;
-
-  const clouds = false;
+  const clouds = true;
   const rain = false;
 
-  displayClouds.style.transform = `rotate(${180 * !clouds}deg)`;
-  displayRain.style.transform = `rotate(${180 * rain}deg)`;
+  displayClouds.style.transform = `rotate(${180 * !(clouds * weather)}deg)`;
+  displayRain.style.transform = `rotate(${180 * rain * weather}deg)`;
 };
 
 displayTime();
