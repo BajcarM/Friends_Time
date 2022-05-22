@@ -41,33 +41,49 @@ const displayTime = () => {
 
   timeDisplay.textContent = `${displayHours} ${displayMinutes}`;
 
-  //   displaySunMoon.style.transform = `rotate(${
-  //     currentTime.getHours() * 8 - 90
-  //   }deg)`;
+  rotateSun(currentTime);
+};
 
-  const dayNight = currentTime.getHours() > 6 && currentTime.getHours() < 19;
+const rotateSun = (date) => {
+  const dayNight = date.getHours() > 6 && date.getHours() < 19;
 
   displaySunMoon.style.transform = `
-rotate(${
-    -50 + (85 / 12) * ((currentTime.getHours() - 6) % 12) + 180 * dayNight
-  }deg)
-`;
+    rotate(${
+      -50 + (85 / 12) * ((date.getHours() - 6) % 12) + 180 * dayNight
+    }deg)
+    `;
+
+  displaySky.style.opacity = `${dayNight * 1}`;
+};
+
+const displayWeather = () => {
+  displayClouds.style.opacity = `${weather * 1}`;
+  displayRain.style.opacity = `${weather * 1}`;
+
+  const clouds = false;
+  const rain = false;
+
+  displayClouds.style.transform = `rotate(${180 * !clouds}deg)`;
+  displayRain.style.transform = `rotate(${180 * rain}deg)`;
 };
 
 displayTime();
 
-const time = setInterval(() => {
+setInterval(() => {
   displayTime();
   currentSeconds++;
 }, 1000);
 
+displayWeather();
+
 buttonFormatTime.addEventListener("click", () => {
   format12 = !format12;
   buttonFormatTimeText.textContent = format12 ? "12" : "24";
-  displayAmPm.classList.toggle("hidden");
+  displayAmPm.style.opacity = `${format12 * 1}`;
 });
 
 buttonWeather.addEventListener("click", () => {
   weather = !weather;
   buttonWeatherText.textContent = weather ? "ON" : "OFF";
+  displayWeather();
 });
