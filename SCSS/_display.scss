@@ -5,34 +5,10 @@ svg {
     @include displayWheel;
   }
 
-  & #layer7 {
-    // animation: weatherWheel 10s infinite linear;
-
-    // @keyframes weatherWheel {
-    //   from {
-    //     transform: rotate(0deg);
-    //   }
-    //   to {
-    //     transform: rotate(359deg);
-    //   }
-    // }
-  }
-
   & #g1261 {
     transform-origin: 114.5px 169.5px;
 
     transition: all 0.3s ease;
-    // animation: rotation 1s infinite linear;
-    // animation: rotation 1s infinite ease;
-
-    // @keyframes rotation {
-    //   from {
-    //     transform: rotate(0deg);
-    //   }
-    //   to {
-    //     transform: rotate(6deg);
-    //   }
-    // }
   }
 
   & #tspan6682 {
@@ -53,34 +29,4 @@ svg {
       }
     }
   }
-
-  & #rect880 {
-    // animation: opacity infinite 10s ease;
-
-    // @keyframes opacity {
-    //   0% {
-    //     opacity: 0;
-    //   }
-
-    //   20% {
-    //     opacity: 0;
-    //   }
-
-    //   40% {
-    //     opacity: 1;
-    //   }
-    //   70% {
-    //     opacity: 1;
-    //   }
-    //   100% {
-    //     opacity: 0;
-    //   }
-    // }
-  }
-
-//   & .hidden{
-//       visibility: hidden;
-//   }
-
-
 }

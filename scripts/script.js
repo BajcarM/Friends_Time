@@ -58,7 +58,7 @@ const rotateSun = (date) => {
 
 const displayWeather = () => {
   const clouds = true;
-  const rain = false;
+  const rain = true;
 
   displayClouds.style.transform = `rotate(${180 * !(clouds * weather)}deg)`;
   displayRain.style.transform = `rotate(${180 * rain * weather}deg)`;
