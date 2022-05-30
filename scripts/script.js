@@ -13,6 +13,8 @@ const displaySky = document.getElementById("rect880");
 let format12 = true;
 
 let weather = true;
+let clouds = true;
+let rain = true;
 
 let currentSeconds = 0;
 
@@ -57,9 +59,6 @@ const rotateSun = (date) => {
 };
 
 const displayWeather = () => {
-  const clouds = true;
-  const rain = true;
-
   displayClouds.style.transform = `rotate(${180 * !(clouds * weather)}deg)`;
   displayRain.style.transform = `rotate(${180 * rain * weather}deg)`;
 };
